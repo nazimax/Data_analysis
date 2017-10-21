@@ -43,20 +43,20 @@ public class Main {
 
         //System.out.println(m6);
 
-
-        //System.out.println("======================NEW COORD WITH EIGEN VECTORS =========================\n\n***********PAGE 2 *************\n\n"+m6);
+        Matrix m2=new Matrix(m6.getMatrix());
+        System.out.println("======================NEW COORD WITH EIGEN VECTORS =========================\n\n***********PAGE 2 *************\n\n"+m6);
         Matrix m7= new Matrix(m6.getMatrix());
-//        System.out.println("======================INDIVIDUAL CONTRIBUTION =========================\n\n"+m6.individualContribution(m7,lamda1,lamda2,lamda3));
+        //System.out.println("======================INDIVIDUAL CONTRIBUTION =========================\n\n"+m2.individualContribution(m7,lamda1,lamda2,lamda3));
 
 
-//        System.out.println("======================QUALITY OF REPRESENTATION =========================\n\n***********PAGE 4 *************\n\n"+m6.qualityOfRepresentation(m6));
-//
-//        System.out.println("======================FACTORIAL COORD OF VARIABLES =========================\n\n***********PAGE 4 *************\n\n"+m6.coordFactorielOfVariable(m5,m6,lamda1,lamda2,lamda3));
+        System.out.println("======================QUALITY OF REPRESENTATION =========================\n\n***********PAGE 4 *************\n\n"+m6.qualityOfRepresentation(m6));
 
-//        Matrix m8=m6.coordFactorielOfVariable(m5,m6,lamda1,lamda2,lamda3);
+        System.out.println("======================FACTORIAL COORD OF VARIABLES =========================\n\n***********PAGE 4 *************\n\n"+m6.coordFactorielOfVariable(m5,m6,lamda1,lamda2,lamda3));
 
-        //System.out.println("======================CONTRIBUTION OF VARIABLES =========================\n\n***********PAGE 5 *************\n\n"+m6.contributionOfVariables(m8,lamda1,lamda2,lamda3));
-  //      System.out.println("======================CONTRIBUTION OF VARIABLES =========================\n\n***********PAGE 5 *************\n\n"+m6.qualityOfRepresentation(m8));
+        Matrix m8=m6.coordFactorielOfVariable(m5,m6,lamda1,lamda2,lamda3);
+
+      //  System.out.println("======================CONTRIBUTION OF VARIABLES =========================\n\n***********PAGE 5 *************\n\n"+m6.contributionOfVariables(m8,lamda1,lamda2,lamda3));
+        System.out.println("======================CONTRIBUTION OF VARIABLES =========================\n\n***********PAGE 6 *************\n\n"+m6.qualityOfRepresentation(m8));
 
 
     }
